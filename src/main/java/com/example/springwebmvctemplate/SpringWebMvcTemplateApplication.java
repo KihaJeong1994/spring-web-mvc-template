@@ -1,0 +1,13 @@
+package com.example.springwebmvctemplate;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringWebMvcTemplateApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringWebMvcTemplateApplication.class, args);
+    }
+
+}
