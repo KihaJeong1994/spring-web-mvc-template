@@ -31,4 +31,4 @@ Spring Web MVC : the web framework built on the ***Servlet*** API
 
 ## Exception Handling
 - `RestControllerAdvice` : @ExceptionHandler method under class with `RestControllerAdvice` handles exception from all @Controller -> global
-- you can use ProblemDetail, ErrorResponse to handle error with formal way  ![RFC 7807](https://www.rfc-editor.org/rfc/rfc7807.html)
+- you can use ProblemDetail, ErrorResponse to handle error with formal way  [RFC 7807](https://www.rfc-editor.org/rfc/rfc7807.html)
