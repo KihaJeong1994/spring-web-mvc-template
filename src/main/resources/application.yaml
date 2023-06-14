@@ -1,0 +1,5 @@
+springdoc:
+  swagger-ui: # for swagger ui
+    path: /swagger-ui.html
+  api-docs: # for Open API yaml
+    path: /v3/api-docs
