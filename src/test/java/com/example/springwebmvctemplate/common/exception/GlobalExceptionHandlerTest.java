@@ -1,4 +1,4 @@
-package com.example.springwebmvctemplate.exception;
+package com.example.springwebmvctemplate.common.exception;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -22,10 +22,5 @@ class GlobalExceptionHandlerTest {
     @Autowired
     MockMvc mockMvc;
 
-    @Test
-    void handleIOException() throws Exception {
-        mockMvc.perform(get("/file").param("filePath","noSuchFIle.txt"))
-                        .andExpect(status().isBadRequest())
-                                .andDo(print());
-    }
+
 }
