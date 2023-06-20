@@ -1,4 +1,4 @@
-package com.example.springwebmvctemplate.exception;
+package com.example.springwebmvctemplate.common.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

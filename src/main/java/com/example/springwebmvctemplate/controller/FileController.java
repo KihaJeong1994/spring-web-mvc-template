@@ -1,4 +1,4 @@
-package com.example.springwebmvctemplate.file;
+package com.example.springwebmvctemplate.controller;
 
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.MediaType;
