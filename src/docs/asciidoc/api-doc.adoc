@@ -1,0 +1,18 @@
+= API Documentation
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 3
+
+== File
+
+=== find file
+
+include::{snippets}/file/findFile/curl-request.adoc[]
+
+==== Request
+include::{snippets}/file/findFile/http-request.adoc[]
+
+==== Response
+include::{snippets}/file/findFile/http-response.adoc[]

@@ -32,3 +32,16 @@ Spring Web MVC : the web framework built on the ***Servlet*** API
 ## Exception Handling
 - `RestControllerAdvice` : @ExceptionHandler method under class with `RestControllerAdvice` handles exception from all @Controller -> global
 - you can use ProblemDetail, ErrorResponse to handle error with formal way  [RFC 7807](https://www.rfc-editor.org/rfc/rfc7807.html)
+
+## Spring Rest Docs
+Spring REST Docs uses snippets produced by tests written with Spring MVC's test framework, Spring Webflux's `WebTestClient`
+
+If a snippet is incorrect, the test that produces it fails
+
+pros
+- can separate production code with documentation
+
+cons
+- compared to swagger, you need to write document by yourself(swagger automatically provides you test page)
+- need test code
+- test code with document code
