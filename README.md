@@ -45,3 +45,9 @@ cons
 - compared to swagger, you need to write document by yourself(swagger automatically provides you test page)
 - need test code
 - test code with document code
+
+## WebSocket
+### Stomp
+https://docs.spring.io/spring-framework/reference/web/websocket/stomp.html
+
+STOMP is a sub protocol to use on top of WebSocket
