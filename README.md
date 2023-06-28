@@ -50,4 +50,23 @@ cons
 ### Stomp
 https://docs.spring.io/spring-framework/reference/web/websocket/stomp.html
 
-STOMP is a sub protocol to use on top of WebSocket
+[WebSocket protocol](https://datatracker.ietf.org/doc/html/rfc6455) : establish a full-duplex, two-way communication between client and server over a single TCP connection
+
+1. HTTP Upgrade request
+2. Protocol switch
+3. After a successful handshake, the ***TCP socket*** underlying the HTTP upgrade request remains open for both the client and server
+
+STOMP(Simple Text Oriented Messaging Protocol) is a sub protocol to use on top of WebSocket to enable pub-sub messaging
+- frame based
+```text
+COMMAND
+header1:value1
+header2:value2
+
+Body^@
+```
+
+COMMAND
+- SEND
+- SUBSCRIBE
+- MESSAGE : broadcast messages to all subscribers
