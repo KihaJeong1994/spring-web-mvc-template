@@ -56,7 +56,7 @@ https://docs.spring.io/spring-framework/reference/web/websocket/stomp.html
 2. Protocol switch
 3. After a successful handshake, the ***TCP socket*** underlying the HTTP upgrade request remains open for both the client and server
 
-STOMP(Simple Text Oriented Messaging Protocol) is a sub protocol to use on top of WebSocket to enable pub-sub messaging
+[STOMP(Simple Text Oriented Messaging Protocol)](https://stomp.github.io/stomp-specification-1.2.html) is a sub protocol to use on top of WebSocket to enable pub-sub messaging
 - frame based
 ```text
 COMMAND
