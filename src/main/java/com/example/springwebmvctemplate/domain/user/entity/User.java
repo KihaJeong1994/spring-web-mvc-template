@@ -26,4 +26,8 @@ public class User {
         this.name = name;
         this.profileFileName = profileFileName;
     }
+
+    public void updateProfile(String profileFileName){
+        this.profileFileName = profileFileName;
+    }
 }

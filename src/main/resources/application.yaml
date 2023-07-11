@@ -3,3 +3,9 @@ springdoc:
     path: /swagger-ui.html
   api-docs: # for Open API yaml
     path: /v3/api-docs
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
