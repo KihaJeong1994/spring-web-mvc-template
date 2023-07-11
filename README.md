@@ -29,6 +29,43 @@ Spring Web MVC : the web framework built on the ***Servlet*** API
 
 ## Logging
 
+## Caching
+
+https://docs.spring.io/spring-framework/reference/integration/cache/strategies.html
+
+@EnableCaching -> Spring boot auto-configures the cache infrastructure
+
+At Spring's caching core, the abstraction applies caching to the ***method***
+
+### Caching Annotation
+
+```java
+@Cacheable(value = "user", key = "#id")
+public UserDto getUserById(long id){
+    return userRepository.findById(id).map(userMapper::toDto).orElseThrow();
+}
+@CachePut(value = "user", key = "#id")
+public UserDto updateUserProfile(long id, UpdateUserProfileRequest updateUserProfileRequest){
+    User user = userRepository.findById(id).orElseThrow();
+    user.updateProfile(updateUserProfileRequest.profile().getOriginalFilename());
+    User savedUser = userRepository.save(user);
+    return userMapper.toDto(savedUser);
+}
+
+@CacheEvict(value = "user", key = "#id")
+public void deleteUserById(long id){
+    userRepository.deleteById(id);
+}
+```
+
+- @Cacheable : Before invoking the method, the abstraction looks for an entry in the "user" cache that matches key argument. If the entry is found, the result is immediately returned to the caller, and the method is not invoked. Otherwise, the method is invoked and the cache is updated.
+- @CachePut : the method is always invoked, and the result is placed in the cache
+- @CacheEvict : evict entry from the cache. You can evict all entries with `allEntries=true` option
+
+### Cache Provider
+
+if not configured, `ConcurrentHashMap` is used for simple cache provider by default
+
 ## Exception Handling
 - `RestControllerAdvice` : @ExceptionHandler method under class with `RestControllerAdvice` handles exception from all @Controller -> global
 - you can use ProblemDetail, ErrorResponse to handle error with formal way  [RFC 7807](https://www.rfc-editor.org/rfc/rfc7807.html)
