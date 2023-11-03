@@ -6,7 +6,11 @@ import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingConstants;
 
-@Mapper(componentModel = MappingConstants.ComponentModel.SPRING, injectionStrategy = InjectionStrategy.CONSTRUCTOR) //https://mapstruct.org/documentation/stable/reference/html/#using-dependency-injection
+@Mapper(
+    componentModel = MappingConstants.ComponentModel.SPRING,
+    injectionStrategy =
+        InjectionStrategy
+            .CONSTRUCTOR) // https://mapstruct.org/documentation/stable/reference/html/#using-dependency-injection
 public interface UserMapper {
-    UserDto toDto(User user);
+  UserDto toDto(User user);
 }

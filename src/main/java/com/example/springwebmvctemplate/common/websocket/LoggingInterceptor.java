@@ -11,15 +11,14 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 public class LoggingInterceptor implements ChannelInterceptor {
-    @Override
-    public void postSend(Message<?> message, MessageChannel channel, boolean sent) {
-        StompHeaderAccessor headerAccessor = StompHeaderAccessor.wrap(message);
-        String sessionId = headerAccessor.getSessionId();
-        if(StompCommand.CONNECT.equals(headerAccessor.getCommand())){
-            log.info("######### " + sessionId + " is connected successfully");
-        }
-        else if(StompCommand.DISCONNECT.equals(headerAccessor.getCommand())){
-            log.info("######### " + sessionId + " is disconnected successfully");
-        }
+  @Override
+  public void postSend(Message<?> message, MessageChannel channel, boolean sent) {
+    StompHeaderAccessor headerAccessor = StompHeaderAccessor.wrap(message);
+    String sessionId = headerAccessor.getSessionId();
+    if (StompCommand.CONNECT.equals(headerAccessor.getCommand())) {
+      log.info("######### " + sessionId + " is connected successfully");
+    } else if (StompCommand.DISCONNECT.equals(headerAccessor.getCommand())) {
+      log.info("######### " + sessionId + " is disconnected successfully");
     }
+  }
 }

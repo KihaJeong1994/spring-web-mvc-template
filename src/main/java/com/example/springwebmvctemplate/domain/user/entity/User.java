@@ -12,22 +12,22 @@ import lombok.NoArgsConstructor;
 @Table(name = "USERS")
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    private String email;
-    private String name;
-    private String profileFileName;
+  private String email;
+  private String name;
+  private String profileFileName;
 
-    @Builder
-    public User(String email, String name, String profileFileName) {
-        this.email = email;
-        this.name = name;
-        this.profileFileName = profileFileName;
-    }
+  @Builder
+  public User(String email, String name, String profileFileName) {
+    this.email = email;
+    this.name = name;
+    this.profileFileName = profileFileName;
+  }
 
-    public void updateProfile(String profileFileName){
-        this.profileFileName = profileFileName;
-    }
+  public void updateProfile(String profileFileName) {
+    this.profileFileName = profileFileName;
+  }
 }

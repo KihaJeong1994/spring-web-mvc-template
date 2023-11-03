@@ -12,10 +12,11 @@ import org.springframework.scheduling.annotation.Scheduled;
 @RequiredArgsConstructor
 @Slf4j
 public class CacheConfig {
-    private final CacheManager cacheManager;
-    @Scheduled(cron = "0 0 0 * * *")
-    public void evictUserCachesPerDay() {
-        log.info("user cache evicted");
-        cacheManager.getCache("user").clear();
-    }
+  private final CacheManager cacheManager;
+
+  @Scheduled(cron = "0 0 0 * * *")
+  public void evictUserCachesPerDay() {
+    log.info("user cache evicted");
+    cacheManager.getCache("user").clear();
+  }
 }
