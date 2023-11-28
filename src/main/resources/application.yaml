@@ -9,3 +9,14 @@ spring:
     properties:
       hibernate:
         format_sql: true
+#  cloud:
+#    openfeign:
+#      httpclient:
+#        hc5:
+#          enabled: true # default : false. If false, use sun.net.www.http.HttpClient
+feign:
+  name: user
+  url: https://retoolapi.dev/qisjDm/data
+logging:
+  level:
+    root: info
