@@ -8,8 +8,8 @@ import org.springframework.test.context.ActiveProfiles;
 @TestConfiguration
 @ActiveProfiles("test")
 public class WireMockConfig {
-    @Bean(initMethod = "start", destroyMethod = "stop")
-    public WireMockServer mockUserService(){
-        return new WireMockServer(37623);
-    }
+  @Bean(initMethod = "start", destroyMethod = "stop")
+  public WireMockServer mockUserService() {
+    return new WireMockServer(37623);
+  }
 }
