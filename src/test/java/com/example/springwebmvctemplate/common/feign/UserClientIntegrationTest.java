@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
 @ActiveProfiles("test")
-//@EnableFeignClients //main method에도 추가하고 여기도 추가하니깐 bean 중복 에러 발생
+//@EnableFeignClients // causes overriding bean exception. I think it's because there is same annotation in main method
 @EnableConfigurationProperties
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {WireMockConfig.class})

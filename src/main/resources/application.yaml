@@ -13,7 +13,7 @@ spring:
     openfeign:
       client:
         config:
-          user:
+          user: # feign client name
             url: https://retoolapi.dev/qisjDm/data
 #      httpclient:
 #        hc5:
