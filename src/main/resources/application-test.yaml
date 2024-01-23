@@ -14,7 +14,7 @@ spring:
       client:
         config:
           user:
-            url: https://retoolapi.dev/qisjDm/data
+            url: http://localhost:37623
 #      httpclient:
 #        hc5:
 #          enabled: true # default : false. If false, use sun.net.www.http.HttpClient

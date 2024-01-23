@@ -13,7 +13,7 @@ import org.springframework.http.HttpStatus;
 public class UserMocks {
   public static void setupMockUserResponse(WireMockServer mockService) throws IOException {
     mockService.stubFor(
-        WireMock.get(WireMock.urlEqualTo("/user/feign"))
+        WireMock.get(WireMock.urlEqualTo("/")) // should be same as mock uri, not this server uri
             .willReturn(
                 WireMock.aResponse()
                     .withStatus(HttpStatus.OK.value())
